@@ -591,6 +591,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "43.3\" Standard Barrel", -- they obviously made it with metric in mind first
+        DefaultAttIcon = Material("entities/att/ue_gm6/b_b.png", "smooth mips"),
         Slot = "uc_myt_gm6_b",
         Bone = "W_Main",
         Offset = {
@@ -638,6 +639,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = [[Calibre/Magazine]],
+        DefaultAttIcon = Material("entities/att/ue_gm6/c_b.png", "smooth mips"),
         Slot = {"uc_myt_gm6_mag"},
         Bone = "W_Main",
         Offset = {

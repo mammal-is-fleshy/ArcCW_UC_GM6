@@ -9,7 +9,7 @@ local att = {}
 att.PrintName = "40-Round .308 Mag"
 att.AbbrevName = "40-Round 7.39x51mm NATO Mag"
 
-att.Icon = Material("entities/att/ue_fal/r_556.png", "smooth mips")
+att.Icon = Material("entities/att/ue_gm6/c_308.png", "smooth mips")
 att.Description = "Only by sheer will power could you want to rechamber this behemoth to a DMR."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
@@ -106,7 +106,7 @@ local att = {}
 att.PrintName = "4-Round Compact Mag"
 att.AbbrevName = "4-Round .50 BMG Mag"
 
-att.Icon = Material("entities/att/ue_fal/r_40.png", "smooth mips")
+att.Icon = Material("entities/att/ue_gm6/c_s.png", "smooth mips")
 att.Description = "Extended magazine for machine gunners."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
@@ -138,7 +138,7 @@ ArcCW.LoadAttachmentType(att, "uc_myt_gm6_cal_4")
 local att = {}
 
 att.PrintName = "31.5\" Compact Barrel"
-att.Icon = Material("entities/att/ue_fal/b_s.png", "smooth mips")
+att.Icon = Material("entities/att/ue_gm6/b_s.png", "smooth mips")
 att.Description = [[Reduced barrel length for corps-a-corps environment.]]
 att.Desc_Pros = {
 }
