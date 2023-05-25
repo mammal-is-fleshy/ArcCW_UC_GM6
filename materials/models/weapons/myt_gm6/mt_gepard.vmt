@@ -1,0 +1,35 @@
+"VertexlitGeneric"
+{
+	"$basetexture"		"models\weapons\myt_gm6\MT_Gepard"
+	"$bumpmap"		"models\weapons\myt_gm6\MT_Gepard_n"
+	"$phongexponenttexture"	"models\weapons\myt_gm6\MT_Gepard_s"
+	$color2 "[.7 .7 .7]"
+
+
+	"$envmap"			"models\weapons\myt_gm6\_detail\envmap"
+	"$envmaptint"		"[ .1 .1 .1 ]"
+	"$basealphaenvmapmask"	"1"
+
+	"$phong"	 "1"
+	"$phongboost"	"2.7"
+	"$phongfresnelranges" "[0.25 0.5 1]"
+
+	"$rimlight"	"1"
+	"$rimlightexponent"	"80"	
+	"$rimlightboost"	".2"
+	"$rimmask"	"1"
+
+	"$detail" "models\weapons\myt_gm6\_detail\dt_metal1"
+	"$detailscale" "12"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "0"		
+
+}
+ 
+
+
+
+
+
+
+

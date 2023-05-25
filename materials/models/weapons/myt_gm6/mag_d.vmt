@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\myt_gm6\mag_d"
+	"$bumpmap" "models\weapons\myt_gm6\mag_n"
+	"$phongexponenttexture" "models\weapons\myt_gm6\mag_s"
+	"$envmap" "env_cubemap"
+	"$envmaptint"		"[ .1 .1 .1 ]"
+	"$basealphaenvmapmask"	"1"
+	"$envmapfresnel" ".5"
+	"$basemapalphaenvmapmask" "1"
+	
+	"$color2"					"[1.65 1.65 1.65]"
+
+	"$phong" "1"
+	"$phongalbedotint" "1"
+
+	"$phongboost"	"5"
+	"$phongfresnelranges" "[0.25 0.5 1]"
+}
