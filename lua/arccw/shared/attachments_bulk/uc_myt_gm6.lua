@@ -96,7 +96,7 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 att.Hook_TranslateAnimation = function(wep, anim)
-    return anim .. "_380"
+    return anim .. "_308"
 end
 
 ArcCW.LoadAttachmentType(att, "uc_myt_gm6_cal_308")

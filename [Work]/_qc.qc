@@ -90,13 +90,16 @@ $sequence "fire" {
 	fadeout 0.03
 }
 
-$sequence "fire_iron" {
-	"anims\fire_iron.smd"
+$sequence "fire_308" {
+	"anims\fire_308.smd"
+	"anims\fire_iron_308.smd"
+	blend "sights" 0 1
 	fps 40
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.03
 	fadeout 0.03
 }
+
 
 $sequence "draw" "anims\draw.smd" {
 	fps 40

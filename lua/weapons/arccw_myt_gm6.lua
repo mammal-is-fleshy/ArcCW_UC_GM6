@@ -487,6 +487,20 @@ SWEP.Animations = {
             {s = rottle, 			                    t = 106/40},
         },
     },
+	
+    ["fire_308"] = {
+        Source = "fire_308",
+        ShellEjectAt = 0.01,
+        SoundTable = {{ s = mech, t = 0, v = 0.25 }},
+    },  
+	["fire_308_iron"] = {
+        Source = "fire_308",
+        ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = mech, t = 0 }
+        },
+    },
 
     ["enter_inspect_308"] = {
         Source = "inspect_enter_308",
@@ -603,7 +617,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -0.75, 9),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {15},
+        MergeSlots = {14},
     },
     {
         PrintName = "Tactical",
