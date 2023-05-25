@@ -32,6 +32,10 @@ att.Mult_ShootPitch = 120 / 100
 att.Mult_Penetration = 14 / 20
 att.Mult_DamageMin = ArcCW.UC.StdDmg["762_51"].min / ArcCW.UC.StdDmg["50bmg"].min
 att.Mult_Damage = ArcCW.UC.StdDmg["762_51"].max / ArcCW.UC.StdDmg["50bmg"].max
+
+att.Mult_MuzzleVelocity = ArcCW.UC.StdDmg["762_51"].vel / ArcCW.UC.StdDmg["50bmg"].vel
+att.Mult_PhysBulletMuzzleVelocity = ArcCW.UC.StdDmg["762_51"].vel / ArcCW.UC.StdDmg["50bmg"].vel
+
 att.ShootPitchVariation = 1
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/556x45.mdl"
 att.Override_ShellScale = 1

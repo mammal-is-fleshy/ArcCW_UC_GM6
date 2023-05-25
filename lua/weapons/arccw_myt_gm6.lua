@@ -1,7 +1,7 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
 SWEP.Category = "ArcCW - Urban Coalition"
-SWEP.UC_CategoryPack = "5Urban One-offs"
+SWEP.UC_CategoryPack = "9Urban Expedition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -30,9 +30,9 @@ SWEP.TrueName = "GM6 Lynx"
 
 SWEP.Trivia_Class = "Anti-materiel Rifle"
 SWEP.Trivia_Desc = [[
-Dubbed the mini-howitzer. The might of this calibre knows no boundary of armour.
+Destruction in a bullpup configuration.
 
-Death in a bullpup configuration.
+Dubbed the mini-howitzer. The might of this calibre knows no boundary of armour.
 ]]
 SWEP.Trivia_Calibre = ".50 Browning Machine Gun"
 SWEP.Trivia_Country = "Hungary"
@@ -61,13 +61,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = ArcCW.UC.StdDmg["50bmg"].max
 SWEP.DamageMin = ArcCW.UC.StdDmg["50bmg"].min 
-SWEP.RangeMin = 50
+--SWEP.RangeMin = 1 -- is it 1 or 0???
 SWEP.Range = 1800 -- in METRES
 SWEP.Penetration = ArcCW.UC.StdDmg["50bmg"].pen
 SWEP.DamageType = DMG_AIRBOAT + DMG_BULLET + DMG_ALWAYSGIB
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 853
-SWEP.PhysBulletMuzzleVelocity = 853
+SWEP.MuzzleVelocity = ArcCW.UC.StdDmg["50bmg"].vel
+SWEP.PhysBulletMuzzleVelocity = ArcCW.UC.StdDmg["50bmg"].vel
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -256,6 +256,10 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
+SWEP.BulletBones = {
+    [1] = "W_BulletA",
+    [2] = "W_Bullet"
+}
 
 SWEP.AttachmentElements = {	
     ["conv_308"] = {
@@ -321,9 +325,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "raise.ogg", t = 0},
             {s = common .. "rattle.ogg", t = 0.2 + 5/40},
-            {s = path .. "chpull.ogg",   t = 18/40},
             {s = common .. "cloth_4.ogg",  t = 0.5 + 5/40},
-            {s = path .. "chrelease.ogg",  t = 32/40},
+            {s = "myt_uc_gm6/chforward.ogg", 		t = 18/40},
         },
         ProcDraw = false,
     },	
@@ -388,7 +391,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         MinProgress = 2.25,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 60/40,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -405,7 +408,7 @@ SWEP.Animations = {
             {s = "myt_uc_gm6/mag_hit.ogg", 				t = 98/40},
             {s = rottle, 			                    t = 69/40},
             {s = "myt_uc_gm6/bolt1.ogg",				t = 116/40},
-            {s = "myt_uc_gm6/bolt2.ogg", 				t = 128/40},
+            {s = "myt_uc_gm6/chforward.ogg", 			t = 125/40},
             {s = rottle, 			                    t = 140/40},
         },
     },
@@ -434,10 +437,7 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "weapons/uc_osk/magout.ogg", 			t = 20/40},
             {s = rottle, 			                    t = 17/40},
-            {s = "weapons/uc_osk/struggle.ogg", 		t = 60/40},
-            {s = "weapons/uc_osk/magin.ogg", 			t = 70/40},
             {s = rottle, 			                    t = 69/40},
             {s = common .. "shoulder.ogg", 	        	t = 88/40, v = .5},
         },
@@ -449,7 +449,7 @@ SWEP.Animations = {
         Source = "reload_308",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         MinProgress = 1.5,
-        LastClip1OutTime = 0.9,
+        LastClip1OutTime = 60/40,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -468,7 +468,7 @@ SWEP.Animations = {
         Source = "reload_empty_308",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         MinProgress = 1.6,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 60/40,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -483,7 +483,7 @@ SWEP.Animations = {
             {s = "myt_uc_gm6/mag_in.ogg",				t = 55/40},
             {s = rottle, 			                    t = 55/40},
             {s = "myt_uc_gm6/bolt1.ogg",				t = 83/40},
-            {s = "myt_uc_gm6/bolt2.ogg", 				t = 93/40},
+            {s = "myt_uc_gm6/chforward.ogg", 			t = 90/40},
             {s = rottle, 			                    t = 106/40},
         },
     },
@@ -512,10 +512,7 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "weapons/uc_osk/magout-9.ogg", 			t = 20/40},
             {s = rottle, 			                    t = 17/40},
-            {s = "weapons/uc_osk/struggle-9.ogg", 		t = 53/40},
-            {s = "weapons/uc_osk/magin-9.ogg", 			t = 68/40},
             {s = rottle, 			                    t = 69/40},
         },
     },
@@ -542,7 +539,7 @@ SWEP.Animations = {
         Source = "reload_empty_f",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         MinProgress = 2.7,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 60/40,
         LHIK = true,
         LHIKIn = 2.8,
         LHIKEaseIn = 0.4,
@@ -558,7 +555,7 @@ SWEP.Animations = {
             {s = "myt_uc_gm6/mag_in.ogg",				t = 73/40},
             {s = rottle, 			                    t = 55/40},
             {s = "myt_uc_gm6/bolt1.ogg",				t = 102/40},
-            {s = "myt_uc_gm6/bolt2.ogg", 				t = 114/40},
+            {s = "myt_uc_gm6/chforward.ogg", 				t = 111/40},
             {s = rottle, 			                    t = 126/40},
         },
     },
