@@ -37,7 +37,7 @@ Dubbed the mini-howitzer. The might of this calibre knows no boundary of armour.
 SWEP.Trivia_Calibre = ".50 Browning Machine Gun"
 SWEP.Trivia_Country = "Hungary"
 SWEP.Trivia_Manufacturer = "Szerona Nemzetkoezi"
-SWEP.Trivia_Year = 19991
+SWEP.Trivia_Year = 1991
 
 -- Weapon slot --
 
@@ -618,7 +618,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -0.75, 9),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {14},
+        MergeSlots = {13},
     },
     {
         PrintName = "Tactical",
