@@ -10,7 +10,7 @@ att.PrintName = "40-Round .308 Mag"
 att.AbbrevName = "40-Round 7.39x51mm NATO Mag"
 
 att.Icon = Material("entities/att/ue_gm6/c_308.png", "smooth mips")
-att.Description = "Only by sheer will power could you want to rechamber this behemoth to a DMR."
+att.Description = "Only by sheer will power could you want to downgrade and rechamber this behemoth to a DMR."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}
@@ -111,12 +111,13 @@ att.PrintName = "4-Round Compact Mag"
 att.AbbrevName = "4-Round .50 BMG Mag"
 
 att.Icon = Material("entities/att/ue_gm6/c_s.png", "smooth mips")
-att.Description = "Extended magazine for machine gunners."
+att.Description = "Mess with spacing with this one trick. Funky spring placement allowing for less bullets but more space."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}
 att.Slot = "uc_myt_gm6_mag"
 att.SortOrder = 40 + 308
+att.Mult_RPM = 1.2
 
 att.AutoStats = true
 att.HideIfBlocked = true
