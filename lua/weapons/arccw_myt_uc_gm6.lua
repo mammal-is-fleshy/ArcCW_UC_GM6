@@ -106,7 +106,7 @@ SWEP.Firemodes = {
 }
 
 
-SWEP.ShootVol = 500 -- volume of shoot sound
+SWEP.ShootVol = 100 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 SWEP.ShootPitchVariation = 0
 
@@ -177,7 +177,7 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")weapons/uc_osk/"
+local path = ")myt_uc_gm6/"
 local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
@@ -387,12 +387,12 @@ SWEP.Animations = {
         LHIKOut = 0.65,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "myt_uc_gm6/mag_dis.ogg", 				t = 18/40}, 
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 33/40},
+            {s = "myt_uc_gm6/magrel.ogg", 				t = 18/40}, 
+			{s = "myt_uc_gm6/magout.ogg", 				t = 33/40},
             {s = rottle, 			                    t = 20/40},
             {s = common .. "magpouch.ogg",              t = 32/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 62/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 84/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 62/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 84/40},
             {s = rottle, 			                    t = 90/40},
         },
     },
@@ -408,16 +408,18 @@ SWEP.Animations = {
         LHIKOut = 0.8,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "myt_uc_gm6/mag_dis.ogg", 				t = 26/40}, 
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 38/40},
+            {s = "myt_uc_gm6/magrel.ogg", 				t = 26/40}, 
+			{s = "myt_uc_gm6/magout.ogg", 				t = 38/40},
             {s = rottle, 			                    t = 40/40},
             {s = magdrop, 			                    t = 50/40, v = 0.25},
             {s = common .. "magpouch.ogg",              t = 65/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 73/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 98/40},
+            {s = "myt_uc_gm6/magplace.ogg",				t = 70/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 77/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 98/40},
             {s = rottle, 			                    t = 69/40},
-            {s = "myt_uc_gm6/bolt1.ogg",				t = 116/40},
-            {s = "myt_uc_gm6/chforward.ogg", 			t = 125/40},
+            {s = "myt_uc_gm6/chgrab.ogg",				t = 108/40},
+            {s = "myt_uc_gm6/chback.ogg",				t = 112/40},
+            {s = "myt_uc_gm6/chforward.ogg", 			t = 122/40},
             {s = rottle, 			                    t = 140/40},
         },
     },
@@ -466,11 +468,11 @@ SWEP.Animations = {
         LHIKOut = 0.575,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 18/40},
+			{s = "myt_uc_gm6/magout.ogg", 				t = 18/40},
             {s = rottle, 			                    t = 20/40},
             {s = common .. "magpouch.ogg",              t = 32/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 52/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 60/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 52/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 60/40},
             {s = rottle, 			                    t = 74/40},
         },
     },
@@ -486,14 +488,14 @@ SWEP.Animations = {
         LHIKOut = 0.8,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 20/40},
+			{s = "myt_uc_gm6/magout.ogg", 				t = 20/40},
             {s = rottle, 			                    t = 40/40},
             {s = magdrop, 			                    t = 35/40, v = 0.25},
             {s = common .. "magpouch.ogg",              t = 40/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 55/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 62/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 55/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 62/40},
             {s = rottle, 			                    t = 70/40},
-            {s = "myt_uc_gm6/bolt1.ogg",				t = 83/40},
+            {s = "myt_uc_gm6/chback.ogg",				t = 83/40},
             {s = "myt_uc_gm6/chforward.ogg", 			t = 90/40},
             {s = rottle, 			                    t = 106/40},
         },
@@ -556,12 +558,12 @@ SWEP.Animations = {
         LHIKOut = 0.65,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "myt_uc_gm6/mag_dis.ogg", 				t = 18/40}, 
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 33/40},
+            {s = "myt_uc_gm6/magrel.ogg", 				t = 18/40}, 
+			{s = "myt_uc_gm6/magout.ogg", 				t = 33/40},
             {s = rottle, 			                    t = 20/40},
             {s = common .. "magpouch.ogg",              t = 32/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 62/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 70/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 62/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 70/40},
             {s = rottle, 			                    t = 74/40},
         },
     },
@@ -577,15 +579,15 @@ SWEP.Animations = {
         LHIKOut = 0.8,
         SoundTable = {
             {s = rottle, 			                    t = 0/40},
-            {s = "myt_uc_gm6/mag_dis.ogg", 				t = 26/40}, 
-			{s = "myt_uc_gm6/mag_out.ogg", 				t = 38/40},
+            {s = "myt_uc_gm6/magrel.ogg", 				t = 26/40}, 
+			{s = "myt_uc_gm6/magout.ogg", 				t = 38/40},
             {s = rottle, 			                    t = 40/40},
             {s = magdrop, 			                    t = 50/40, v = 0.25},
             {s = common .. "magpouch.ogg",              t = 65/40},
-            {s = "myt_uc_gm6/mag_in.ogg",				t = 73/40},
-            {s = "myt_uc_gm6/mag_hit.ogg", 				t = 80/40},
+            {s = "myt_uc_gm6/magin.ogg",				t = 73/40},
+            {s = "myt_uc_gm6/magtap.ogg", 				t = 80/40},
             {s = rottle, 			                    t = 55/40},
-            {s = "myt_uc_gm6/bolt1.ogg",				t = 101/40},
+            {s = "myt_uc_gm6/chback.ogg",				t = 101/40},
             {s = "myt_uc_gm6/chforward.ogg", 				t = 110/40},
             {s = rottle, 			                    t = 126/40},
         },
