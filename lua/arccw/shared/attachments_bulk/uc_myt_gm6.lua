@@ -15,7 +15,7 @@ att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}
 att.Slot = "uc_myt_gm6_mag"
-att.SortOrder = 4 + 5000
+att.SortOrder = 4 - 5000
 
 att.Override_Ammo = "ar2"
 att.Override_Trivia_Calibre = "5.56x45mm NATO"
@@ -67,15 +67,20 @@ att.Override_Firemodes = {
     }
 }
 att.ActivateElements = {"conv_308"}
-local tail556 = ")/arccw_uc/common/556x45/"
-local fire556dist = {tail556 .. "fire-dist-556x45-rif-ext-01.ogg", tail556 .. "fire-dist-556x45-rif-ext-02.ogg", tail556 .. "fire-dist-556x45-rif-ext-03.ogg", tail556 .. "fire-dist-556x45-rif-ext-04.ogg", tail556 .. "fire-dist-556x45-rif-ext-05.ogg", tail556 .. "fire-dist-556x45-rif-ext-06.ogg"}
-local fire556distint = {tail556 .. "fire-dist-556x45-rif-int-01.ogg", tail556 .. "fire-dist-556x45-rif-int-02.ogg", tail556 .. "fire-dist-556x45-rif-int-03.ogg", tail556 .. "fire-dist-556x45-rif-int-04.ogg", tail556 .. "fire-dist-556x45-rif-int-05.ogg", tail556 .. "fire-dist-556x45-rif-int-06.ogg"}
+
+local path = ")myt_uc_gm6/308/"
+local common = ")/arccw_uc/common/"
+local tail762 = ")/arccw_uc/common/762x39/"
+local fire762dist = {tail762 .. "fire-dist-762x39-rif-ext-01.ogg", tail762 .. "fire-dist-762x39-rif-ext-02.ogg", tail762 .. "fire-dist-762x39-rif-ext-03.ogg", tail762 .. "fire-dist-762x39-rif-ext-04.ogg", tail762 .. "fire-dist-762x39-rif-ext-05.ogg", tail762 .. "fire-dist-762x39-rif-ext-06.ogg"}
+local fire762distint = {tail762 .. "fire-dist-762x39-rif-int-01.ogg", tail762 .. "fire-dist-762x39-rif-int-02.ogg", tail762 .. "fire-dist-762x39-rif-int-03.ogg", tail762 .. "fire-dist-762x39-rif-int-04.ogg", tail762 .. "fire-dist-762x39-rif-int-05.ogg", tail762 .. "fire-dist-762x39-rif-int-06.ogg"}
+local fire762 = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"}
+local fire762supp = {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, fsound)
     if wep:GetBuff_Override("Silencer") then
-        return fire556supp
+        return fire762supp
     else
-        return fire556
+        return fire762
     end
 end
 
@@ -83,15 +88,16 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return fire556dist
+        return fire762dist
     end
 end
-att.Hook_GetShootSound = function(wep, fsound)
-	if wep:GetBuff_Override("Silencer") then
-		return "myt_c1a1/shot_556_sd.ogg"
-	else
-		return "myt_c1a1/556-1.ogg" || "myt_c1a1/556-2.ogg" || "myt_c1a1/556-3.ogg" || "myt_c1a1/556-4.ogg" 
-	end
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return fire762distint
+    end
 end
 
 
@@ -103,6 +109,9 @@ att.Hook_TranslateAnimation = function(wep, anim)
     return anim .. "_308"
 end
 
+att.Hook_SelectFireAnimation = function(wep, anim)
+    return anim .. "_308"
+end
 ArcCW.LoadAttachmentType(att, "uc_myt_gm6_cal_308")
 ---------------------------------------------------------------------------------------------------------------------
 local att = {}
